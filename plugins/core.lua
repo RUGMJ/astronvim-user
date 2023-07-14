@@ -5,20 +5,52 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+
+        " _____              _____          _      ",
+        "|  __ \\            / ____|        | |     ",
+        "| |__) |   _  __ _| |     ___   __| | ___ ",
+        "|  _  / | | |/ _` | |    / _ \\ / _` |/ _ \\",
+        "| | \\ \\ |_| | (_| | |___| (_) | (_| |  __/",
+        "|_|  \\_\\__,_|\\__, |\\_____\\___/ \\__,_|\\___|",
+        "              __/ |                       ",
+        "             |___/                        "
       }
-      return opts
     end,
+
+    config = function(_, opts)
+      require("alpha").setup(opts.config)
+
+      local splashes = {
+        "Procrastinate in style!",
+        "Code: Where laughter dies.",
+        "Coding: Sleepless nights guaranteed.",
+        "404: Humor not found.",
+        "Embrace the coding chaos!",
+        "Code: Chaos controlled.",
+        "Refactor like a boss.",
+        "Laughing at syntax errors.",
+        "Blame the compiler!",
+        "Copy, paste, pray.",
+        "Bug-fueled coffee.",
+        "Smart objects, dumb me.",
+        "Dreams to errors.",
+        "Life's short, code shorter.",
+        "Debugging Picasso.",
+        "Bugs turned bug spray.",
+        "Abandon hope, codebase!",
+        "Typos, infinite chaos.",
+        "Zero sense of humor.",
+        "Code, break, maybe fix.",
+        "I code, I'm frustrated.",
+        "Commit, blame, repeat.",
+        "Questioning code's sanity.",
+        "Code humor, self-laugh.",
+        "Code: Unread, forever."
+      }
+
+      opts.section.footer.val = { " ", " ", " ", splashes[math.random(#splashes)] }
+      opts.section.footer.opts.hl = "DashboardFooter"
+    end
   },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
