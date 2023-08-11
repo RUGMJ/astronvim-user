@@ -1,4 +1,6 @@
 return {
   "antonk52/bad-practices.nvim",
-  opts = {}
+  config = function ()
+    require("bad_practices").setup();
+  end
 }

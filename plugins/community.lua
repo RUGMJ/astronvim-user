@@ -8,6 +8,8 @@ return {
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.motion.harpoon" }
+  { import = "astrocommunity.motion.harpoon" },
+  { import = "astrocommunity.completion.tabnine-nvim"}
 }
